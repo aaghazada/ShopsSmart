@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Shops Smart</string>
-    <string name="search_here">Search here ...</string>
+    <string name="search_here">Search here …</string>
+    <string name="home">Home</string>
+    <string name="wishlist">WishList</string>
+    <string name="history">History</string>
+    <string name="account">Account</string>
+    <string name="title_place_holder">title_place_holder</string>
+    <string name="price_place_holder">price_place_holder</string>
 </resources>

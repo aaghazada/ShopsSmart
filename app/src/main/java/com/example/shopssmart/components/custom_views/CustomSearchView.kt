@@ -13,7 +13,4 @@ class CustomSearchView @JvmOverloads constructor(
 ) : LinearLayout(ctx, attrSet, styleDef) {
     private val binding: LayoutCustomSearchBinding =
         LayoutCustomSearchBinding.inflate(LayoutInflater.from(context), this, true)
-    init {
-        addView(binding.root)
-    }
 }
