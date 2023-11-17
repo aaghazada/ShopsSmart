@@ -23,17 +23,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private fun setupBottomNav() {
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        navController = navHostFragment.navController
+        val navController = findNavController(R.id.nav_host_fragment)
         binding.bottomNavBar.setupWithNavController(navController)
-
-
-//        navController = findNavController(binding.navHostFragment.id)
-//        binding.bottomNavBar.setupWithNavController(navController)
 
 //        navController.addOnDestinationChangedListener{ controller, destination, arguments ->
 //
 //
 //        }
+
     }
 }

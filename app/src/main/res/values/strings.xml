@@ -7,4 +7,6 @@
     <string name="account">Account</string>
     <string name="title_place_holder">title_place_holder</string>
     <string name="price_place_holder">price_place_holder</string>
+    <string name="category_title">Category</string>
+    <string name="addToCard">Add to Card</string>
 </resources>

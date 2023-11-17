@@ -4,5 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#67C4A7</color>
     <color name="gray">#BEBEBE</color>
+    <color name="colorSecondaryGreen">#F0F2F1</color>
 
 </resources>

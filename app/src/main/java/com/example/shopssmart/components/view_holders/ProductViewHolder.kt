@@ -1,5 +1,6 @@
 package com.example.shopssmart.components.view_holders
 
+import com.example.shopssmart.R
 import com.example.shopssmart.base.BaseViewHolder
 import com.example.shopssmart.databinding.ItemProductViewBinding
 import com.example.shopssmart.model.local.ProductModel
@@ -7,7 +8,16 @@ import com.example.shopssmart.model.local.ProductModel
 class ProductViewHolder(val binding: ItemProductViewBinding) :
     BaseViewHolder<ProductModel, ItemProductViewBinding>(binding) {
     override fun bind(item: ProductModel) {
-        binding.productTitle.text = item.productTitle
-        binding.price.text = item.price
+        binding.txtProductPrice.text = item.price
+        binding.txtProductTitle.text = item.productTitle
+        binding.productImage.setImageResource(item.productImage)
+
+        if (item.isFavourite) {
+            binding.imgMakeFavourite.setImageResource((R.drawable.ic_heart_red))
+        } else {
+            binding.imgMakeFavourite.setImageResource((R.drawable.ic_heart))
+
+        }
+
     }
 }
