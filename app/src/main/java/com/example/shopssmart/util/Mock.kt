@@ -6,7 +6,6 @@ import com.example.shopssmart.model.local.CategoryModel
 import com.example.shopssmart.model.local.ProductModel
 
 object Mock {
-
     fun getMockBanner(): ArrayList<BannerModel> {
         return arrayListOf(
             BannerModel(
@@ -76,7 +75,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "Apple AirPods",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "asdfghjkl;",
                 description = "",
                 isFavourite = false,
@@ -85,7 +84,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = true,
@@ -94,7 +93,47 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
+                productTitle = "",
+                description = "",
+                isFavourite = false,
+                price = ""
+            ),ProductModel(
+                id = 1,
+                productId = "asdfgh",
+                productImage = R.drawable.img,
+                productTitle = "",
+                description = "",
+                isFavourite = false,
+                price = ""
+            ),ProductModel(
+                id = 1,
+                productId = "asdfgh",
+                productImage = R.drawable.img,
+                productTitle = "",
+                description = "",
+                isFavourite = false,
+                price = ""
+            ),ProductModel(
+                id = 1,
+                productId = "asdfgh",
+                productImage = R.drawable.img,
+                productTitle = "",
+                description = "",
+                isFavourite = false,
+                price = ""
+            ),ProductModel(
+                id = 1,
+                productId = "asdfgh",
+                productImage = R.drawable.img,
+                productTitle = "",
+                description = "",
+                isFavourite = false,
+                price = ""
+            ),ProductModel(
+                id = 1,
+                productId = "asdfgh",
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
@@ -103,16 +142,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
-                productTitle = "",
-                description = "",
-                isFavourite = true,
-                price = ""
-            ),
-            ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
@@ -121,7 +151,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
@@ -130,7 +160,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
@@ -139,7 +169,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
@@ -148,7 +178,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
@@ -157,7 +187,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
@@ -166,7 +196,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
@@ -175,7 +205,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
@@ -184,7 +214,15 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
+                productTitle = "",
+                description = "",
+                isFavourite = false,
+                price = ""
+            ),ProductModel(
+                id = 1,
+                productId = "asdfgh",
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
@@ -193,7 +231,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
@@ -202,7 +240,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
@@ -211,7 +249,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
@@ -220,7 +258,7 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = 1,
+                productImage = R.drawable.img,
                 productTitle = "",
                 description = "",
                 isFavourite = false,
