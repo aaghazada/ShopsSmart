@@ -6,29 +6,44 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
-        tools:layout="@layout/fragment_home"
         android:id="@+id/homeFragment"
         android:name="com.example.shopssmart.ui.home.HomeFragment"
-        android:label="HomeFragment" >
+        android:label="Home Fragment"
+        tools:layout="@layout/fragment_home">
 
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment">
+
+        </action>
     </fragment>
 
     <fragment
-        tools:layout="@layout/fragment_wishlist"
         android:id="@+id/wishListFragment"
-        android:name="com.example.shopssmart.ui.home.HomeFragment"
-        android:label="WishlistFragment" />
+        android:name="com.example.shopssmart.ui.wishlist.WishlistFragment"
+        android:label="Wishlist Fragment"
+        tools:layout="@layout/fragment_wishlist" />
 
     <fragment
-        tools:layout="@layout/fragment_history"
         android:id="@+id/historyFragment"
-        android:name="com.example.shopssmart.ui.home.HomeFragment"
-        android:label="HistoryFragment" />
+        android:name="com.example.shopssmart.ui.history.HistoryFragment"
+        android:label="History Fragment"
+        tools:layout="@layout/fragment_history" />
 
     <fragment
-        tools:layout="@layout/fragment_account"
         android:id="@+id/accountFragment"
-        android:name="com.example.shopssmart.ui.home.HomeFragment"
-        android:label="AccountFragment" />
+        android:name="com.example.shopssmart.ui.account.AccountFragment"
+        android:label="Account Fragment"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.shopssmart.ui.details.ProductDetailsFragment"
+        android:label="Details Product"
+        tools:layout="@layout/fragment_product_details" >
+<!--        <argument-->
+<!--            android:name="selected_item"-->
+<!--            app:argType="com.example.shopssmart.model.local.ProductModel" />-->
+    </fragment>
 
 </navigation>

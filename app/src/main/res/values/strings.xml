@@ -8,5 +8,8 @@
     <string name="title_place_holder">title_place_holder</string>
     <string name="price_place_holder">price_place_holder</string>
     <string name="category_title">Category</string>
-    <string name="addToCard">Add to Card</string>
+    <string name="add_to_card">Add to card</string>
+    <string name="buy_now">Buy now</string>
+    <string name="details_of_product">Details of product</string>
+    <string name="choose_the_color">Choose the color</string>
 </resources>

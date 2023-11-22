@@ -8,7 +8,7 @@ import com.example.shopssmart.components.view_holders.ProductViewHolder
 import com.example.shopssmart.databinding.ItemProductViewBinding
 import com.example.shopssmart.model.local.ProductModel
 
-class ProductAdapter :
+class ProductAdapter(val onClick: (ProductModel) -> Unit) :
     BaseRecyclerAdapter<ProductModel, ItemProductViewBinding, ProductViewHolder>() {
     override fun createViewBinding(parent: ViewGroup, viewType: Int): ItemProductViewBinding {
         return ItemProductViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -18,6 +18,6 @@ class ProductAdapter :
         binding: ItemProductViewBinding,
         viewType: Int
     ): ProductViewHolder {
-        return ProductViewHolder(binding)
+        return ProductViewHolder(binding, onClick)
     }
 }

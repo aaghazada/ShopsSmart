@@ -2,14 +2,18 @@ package com.example.shopssmart.ui.home
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.shopssmart.R
 import com.example.shopssmart.base.BaseFragment
 import com.example.shopssmart.components.adapters.BannerAdapter
 import com.example.shopssmart.components.adapters.CategoryAdapter
 import com.example.shopssmart.components.adapters.ProductAdapter
 import com.example.shopssmart.databinding.FragmentHomeBinding
+import com.example.shopssmart.util.BundleNames.SELECTED_ITEM
 import com.example.shopssmart.util.Mock.getMockBanner
 import com.example.shopssmart.util.Mock.getMockCategory
 import com.example.shopssmart.util.Mock.getMockProducts
@@ -25,7 +29,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     }
 
     private fun initView() {
-        productAdapter = ProductAdapter()
+        productAdapter = ProductAdapter { productModel ->
+            findNavController().navigate(
+                R.id.action_homeFragment_to_productDetailsFragment,
+                bundleOf(SELECTED_ITEM to productModel)
+            )
+
+        }
         categoryAdapter = CategoryAdapter { selectedCategory ->
 
         }
