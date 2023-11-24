@@ -38,6 +38,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+
     }
 }
 
@@ -57,6 +58,12 @@ dependencies {
 
     // Jetpack Compose Integration
     implementation("androidx.navigation:navigation-compose:$nav_version")
+
+    //Room
+    implementation("androidx.room:room-runtime:2.2.4")
+    implementation("androidx.room:room-runtime:2.2.4")
+    implementation("androidx.room:room-ktx:2.2.5")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

@@ -1,18 +1,16 @@
 package com.example.shopssmart.ui.main
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import androidx.core.view.isVisible
-import androidx.navigation.ActivityNavigator
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.shopssmart.R
 import com.example.shopssmart.base.BaseActivity
 import com.example.shopssmart.databinding.ActivityMainBinding
-import com.example.shopssmart.ui.details.ProductDetailsFragment
+import com.example.shopssmart.ui.search.SearchDialogFragment
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     private lateinit var navController: NavController
@@ -29,6 +27,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private fun initViews() {
         binding.imgBackArrow.setOnClickListener {
             onBackPressed()
+        }
+
+        binding.searchView.setOnClickListener{
+            val dialog = SearchDialogFragment()
+            dialog.show(supportFragmentManager, "")
+            dialog.onSearch = {
+                Log.i("searchValue", it)
+            }
         }
     }
 
@@ -57,6 +63,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 )
             }
 
+            binding.bottomNavBar.apply {
+                isVisible = destination.id !in setOf(
+                    R.id.productDetailsFragment
+                )
+            }
+
         }
+
     }
 }

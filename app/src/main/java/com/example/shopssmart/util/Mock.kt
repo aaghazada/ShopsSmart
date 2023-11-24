@@ -3,9 +3,19 @@ package com.example.shopssmart.util
 import com.example.shopssmart.R
 import com.example.shopssmart.model.local.BannerModel
 import com.example.shopssmart.model.local.CategoryModel
+import com.example.shopssmart.model.local.DialogModel
 import com.example.shopssmart.model.local.ProductModel
 
 object Mock {
+
+    fun getDialogSearch(): ArrayList<DialogModel> {
+        return arrayListOf(
+            DialogModel(
+                title = "Iphone 15 Pro Max"
+            )
+        )
+    }
+
     fun getMockBanner(): ArrayList<BannerModel> {
         return arrayListOf(
             BannerModel(

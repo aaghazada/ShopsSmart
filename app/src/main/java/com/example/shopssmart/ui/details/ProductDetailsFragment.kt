@@ -15,7 +15,6 @@ class ProductDetailsFragment :
         initView()
     }
 
-
     private fun initView() {
         val item = requireArguments().getParcelable<ProductModel>(SELECTED_ITEM)
     }

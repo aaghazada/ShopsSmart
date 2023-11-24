@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,6 +18,7 @@ import com.example.shopssmart.util.BundleNames.SELECTED_ITEM
 import com.example.shopssmart.util.Mock.getMockBanner
 import com.example.shopssmart.util.Mock.getMockCategory
 import com.example.shopssmart.util.Mock.getMockProducts
+import com.example.shopssmart.util.UtilFunctions.getNavOptions
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
     private lateinit var productAdapter: ProductAdapter
@@ -32,7 +34,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         productAdapter = ProductAdapter { productModel ->
             findNavController().navigate(
                 R.id.action_homeFragment_to_productDetailsFragment,
-                bundleOf(SELECTED_ITEM to productModel)
+                bundleOf(SELECTED_ITEM to productModel),
+                getNavOptions()
             )
 
         }
@@ -58,5 +61,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         productAdapter.setData(productList)
         categoryAdapter.setData(categoryList)
         bannerAdapter.setData(bannerList)
+
     }
 }

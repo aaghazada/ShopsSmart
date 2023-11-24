@@ -13,7 +13,7 @@ abstract class BaseDialogFragment<VB: ViewBinding>(
 ) : DialogFragment() {
 
     private var _binding: VB? = null
-    val views get() = _binding!!
+    val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,11 +21,19 @@ abstract class BaseDialogFragment<VB: ViewBinding>(
         savedInstanceState: Bundle?
     ): View? {
         _binding = inflate.invoke(inflater, container, false)
-        return views.root
+        return binding.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+    override fun onStart() {
+        super.onStart()
+        dialog?.let {
+            val width = ViewGroup.LayoutParams.MATCH_PARENT
+            val height = ViewGroup.LayoutParams.MATCH_PARENT
+            it.window?.setLayout(width, height)
+        }
     }
 }
