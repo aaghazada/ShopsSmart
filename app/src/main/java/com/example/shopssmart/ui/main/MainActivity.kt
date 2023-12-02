@@ -11,7 +11,9 @@ import com.example.shopssmart.R
 import com.example.shopssmart.base.BaseActivity
 import com.example.shopssmart.databinding.ActivityMainBinding
 import com.example.shopssmart.ui.search.SearchDialogFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     private lateinit var navController: NavController
     override val bindingInflater: (LayoutInflater) -> ActivityMainBinding

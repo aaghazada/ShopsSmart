@@ -24,20 +24,20 @@ class SearchDialogFragment :
             DialogFragment.STYLE_NORMAL,
             android.R.style.Theme_Light_NoTitleBar_Fullscreen
         )
-//        initView()
+
     }
 
-//    private fun initView() {
-//        dialogAdapter = DialogAdapter()
-//
-//        binding.recyclerViewSearch.layoutManager =
-//            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-//
-//        val dialogList = Mock.getDialogSearch()
-//
-//        binding.recyclerViewSearch.adapter = DialogAdapter()
-//        dialogAdapter.setData(dialogList)
-//    }
+    private fun initView() {
+        dialogAdapter = DialogAdapter()
+
+        binding.recyclerViewSearch.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+
+        val dialogList = Mock.getDialogSearch()
+
+        binding.recyclerViewSearch.adapter = DialogAdapter()
+        dialogAdapter.setData(dialogList)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -45,5 +45,6 @@ class SearchDialogFragment :
             onSearch(it)
             dismiss()
         }
+        initView()
     }
 }

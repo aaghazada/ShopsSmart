@@ -19,6 +19,11 @@ import com.example.shopssmart.util.Mock.getMockBanner
 import com.example.shopssmart.util.Mock.getMockCategory
 import com.example.shopssmart.util.Mock.getMockProducts
 import com.example.shopssmart.util.UtilFunctions.getNavOptions
+import com.google.firebase.Firebase
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.database
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
     private lateinit var productAdapter: ProductAdapter
@@ -28,6 +33,23 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         super.onViewCreated(view, savedInstanceState)
 
         initView()
+
+        val database = Firebase.database
+        val myRef = database.getReference("message")
+
+        myRef.setValue("Hello world!")
+
+        myRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val myValue = snapshot.value
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                val onCancelled = error.message
+            }
+
+        })
+
     }
 
     private fun initView() {
