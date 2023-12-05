@@ -1,4 +1,10 @@
 package com.example.shopssmart.db
 
-class AppDatabase {
+import androidx.room.Database
+import androidx.room.RoomDatabase
+import com.example.shopssmart.model.local.ProductModel
+
+@Database(entities = [ProductModel::class], version = 2)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun getProductDao(): ProductDao
 }

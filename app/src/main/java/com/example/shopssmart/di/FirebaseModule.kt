@@ -11,6 +11,7 @@ import dagger.hilt.components.SingletonComponent
 @Module
 @InstallIn(SingletonComponent::class)
 object FirebaseModule {
+
     @Provides
     fun provideFirebaseDatabase() : FirebaseDatabase{
         return Firebase.database

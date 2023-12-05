@@ -15,7 +15,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.shopssmart"
-        minSdk = 24
+        minSdk = 30
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -43,6 +43,10 @@ android {
         viewBinding = true
 
     }
+    kapt{
+        correctErrorTypes = true
+    }
+
 }
 
 dependencies {
@@ -92,6 +96,9 @@ dependencies {
     //Hilt
     implementation("com.google.dagger:hilt-android:2.42")
     kapt("com.google.dagger:hilt-android-compiler:2.42")
+
+    //SwipeRefresh
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
