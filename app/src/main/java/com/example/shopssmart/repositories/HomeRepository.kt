@@ -1,15 +1,22 @@
 package com.example.shopssmart.repositories
 
 import android.util.Log
+import com.example.shopssmart.db.ProductDao
 import com.example.shopssmart.model.local.ProductModel
 import com.example.shopssmart.util.FirebaseReferenceName.PRODUCT_REFERENCE_NAME
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class HomeRepository @Inject constructor(private val firebaseDatabase: FirebaseDatabase) {
+class HomeRepository @Inject constructor(
+    private val firebaseDatabase: FirebaseDatabase,
+    private val productDao: ProductDao
+) {
+
     fun getNewAddedProduct() {
         val productRef = firebaseDatabase.getReference(PRODUCT_REFERENCE_NAME)
 
@@ -28,6 +35,9 @@ class HomeRepository @Inject constructor(private val firebaseDatabase: FirebaseD
         })
     }
 
+    suspend fun insertNewProduct(productModel: ProductModel) = withContext(Dispatchers.IO) {
+        productDao.insertProduct(productModel)
+    }
 
     fun addNewProduct(productModel: ProductModel) {
         val productRef = firebaseDatabase.getReference(PRODUCT_REFERENCE_NAME)
@@ -36,7 +46,7 @@ class HomeRepository @Inject constructor(private val firebaseDatabase: FirebaseD
     }
 
     fun getAllProducts() {
-        //dao.getAllProducts()
+//        productDao.getAllProducts()
     }
 
 }

@@ -32,4 +32,6 @@ data class ProductModel(
     @ColumnInfo(name = "isFavorite")
     val isFavourite: Boolean = false
 
-): Parcelable
+): Parcelable {
+    constructor() : this(0, "", "", 0, "", "", false)
+}

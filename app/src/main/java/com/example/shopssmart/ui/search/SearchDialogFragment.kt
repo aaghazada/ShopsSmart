@@ -35,7 +35,7 @@ class SearchDialogFragment :
 
         val dialogList = Mock.getDialogSearch()
 
-        binding.recyclerViewSearch.adapter = DialogAdapter()
+        binding.recyclerViewSearch.adapter = dialogAdapter
         dialogAdapter.setData(dialogList)
     }
 

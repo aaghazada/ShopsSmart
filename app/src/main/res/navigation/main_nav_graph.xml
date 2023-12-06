@@ -16,6 +16,9 @@
             app:destination="@id/productDetailsFragment">
 
         </action>
+        <action
+            android:id="@+id/action_homeFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
     </fragment>
 
     <fragment
@@ -45,5 +48,11 @@
 <!--            android:name="selected_item"-->
 <!--            app:argType="com.example.shopssmart.model.local.ProductModel" />-->
     </fragment>
+
+    <fragment
+        tools:layout="@layout/fragment_add_product"
+        android:id="@+id/addProductFragment"
+        android:name="com.example.shopssmart.ui.add_product.AddProductFragment"
+        android:label="AddProductFragment" />
 
 </navigation>

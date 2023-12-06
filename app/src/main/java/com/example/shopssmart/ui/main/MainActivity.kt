@@ -24,6 +24,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
         initViews()
         setupBottomNav()
+        floatingButton()
+    }
+
+    private fun floatingButton() {
+        binding.floatingButton.setOnClickListener {
+            findNavController(R.id.floating_button).navigate(R.id.action_homeFragment_to_addProductFragment)
+        }
     }
 
     private fun initViews() {
