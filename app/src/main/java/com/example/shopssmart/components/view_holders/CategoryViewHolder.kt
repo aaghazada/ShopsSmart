@@ -1,13 +1,12 @@
 package com.example.shopssmart.components.view_holders
 
 import com.example.shopssmart.base.BaseViewHolder
-import com.example.shopssmart.components.adapters.CategoryAdapter
 import com.example.shopssmart.databinding.ItemCategoryBinding
 import com.example.shopssmart.model.local.CategoryModel
 
 class CategoryViewHolder(
     val binding: ItemCategoryBinding,
-    val onClick: (CategoryAdapter) -> Unit
+    val onClick: (CategoryModel) -> Unit
 ) :
     BaseViewHolder<CategoryModel, ItemCategoryBinding>(binding) {
     override fun bind(item: CategoryModel) {

@@ -6,6 +6,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavOptions
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -65,7 +66,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                 productId = UUID.randomUUID().toString()
             )
 
-            viewModel.addNewProduct(updatedItem)
+//            viewModel.addNewProduct(updatedItem)
             findNavController().navigate(
                 R.id.action_homeFragment_to_productDetailsFragment,
                 bundleOf(SELECTED_ITEM to productModel),
@@ -95,6 +96,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         productAdapter.setData(productList)
         categoryAdapter.setData(categoryList)
         bannerAdapter.setData(bannerList)
+
+        binding.floatingButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_addProductFragment)
+        }
 
     }
 }

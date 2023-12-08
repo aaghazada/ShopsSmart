@@ -103,15 +103,4 @@
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_add"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="TODO" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

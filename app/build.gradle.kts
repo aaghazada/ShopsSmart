@@ -52,6 +52,9 @@ android {
 dependencies {
 
     implementation("com.google.firebase:firebase-database:20.3.0")
+    implementation(platform("com.google.firebase:firebase-bom:32.6.0"))
+    implementation("com.google.firebase:firebase-storage")
+
     val nav_version = "2.7.5"
     val room_version = "2.6.0"
 

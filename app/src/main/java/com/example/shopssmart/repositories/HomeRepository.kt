@@ -39,12 +39,6 @@ class HomeRepository @Inject constructor(
         productDao.insertProduct(productModel)
     }
 
-    fun addNewProduct(productModel: ProductModel) {
-        val productRef = firebaseDatabase.getReference(PRODUCT_REFERENCE_NAME)
-
-        productRef.setValue(productModel)
-    }
-
     fun getAllProducts() {
 //        productDao.getAllProducts()
     }

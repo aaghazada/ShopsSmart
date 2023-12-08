@@ -21,7 +21,7 @@ data class ProductModel(
     val productTitle: String,
 
     @ColumnInfo(name = "productImage")
-    val productImage: Int,
+    val productImage: String,
 
     @ColumnInfo(name = "productPrice")
     val price : String,
@@ -33,5 +33,5 @@ data class ProductModel(
     val isFavourite: Boolean = false
 
 ): Parcelable {
-    constructor() : this(0, "", "", 0, "", "", false)
+    constructor() : this(0, "", "", "", "", "", false)
 }

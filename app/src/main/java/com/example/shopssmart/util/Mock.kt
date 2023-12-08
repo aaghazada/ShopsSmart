@@ -84,17 +84,8 @@ object Mock {
         return arrayListOf(
             ProductModel(
                 id = 1,
-                productId = "Apple AirPods",
-                productImage = R.drawable.img,
-                productTitle = "asdfghjkl;",
-                description = "",
-                isFavourite = false,
-                price = "12345678"
-            ),
-            ProductModel(
-                id = 1,
                 productId = "asdfgh",
-                productImage = R.drawable.img,
+                productImage = "",
                 productTitle = "",
                 description = "",
                 isFavourite = true,
@@ -103,177 +94,48 @@ object Mock {
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = R.drawable.img,
+                productImage = "",
                 productTitle = "",
                 description = "",
-                isFavourite = false,
+                isFavourite = true,
                 price = ""
             ),ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = R.drawable.img,
+                productImage = "",
                 productTitle = "",
                 description = "",
-                isFavourite = false,
+                isFavourite = true,
                 price = ""
             ),ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = R.drawable.img,
+                productImage = "",
                 productTitle = "",
                 description = "",
-                isFavourite = false,
-                price = ""
-            ),ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
-                price = ""
-            ),ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
-                price = ""
-            ),ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
+                isFavourite = true,
                 price = ""
             ),
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = R.drawable.img,
+                productImage = "",
                 productTitle = "",
                 description = "",
-                isFavourite = false,
+                isFavourite = true,
                 price = ""
             ),
             ProductModel(
                 id = 1,
                 productId = "asdfgh",
-                productImage = R.drawable.img,
+                productImage = "",
                 productTitle = "",
                 description = "",
-                isFavourite = false,
-                price = ""
-            ),
-            ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
-                price = ""
-            ),
-            ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
-                price = ""
-            ),
-            ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
-                price = ""
-            ),
-            ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
-                price = ""
-            ),
-            ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
-                price = ""
-            ),
-            ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
-                price = ""
-            ),
-            ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
-                price = ""
-            ),ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
-                price = ""
-            ),
-            ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
-                price = ""
-            ),
-            ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
-                price = ""
-            ),
-            ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
-                price = ""
-            ),
-            ProductModel(
-                id = 1,
-                productId = "asdfgh",
-                productImage = R.drawable.img,
-                productTitle = "",
-                description = "",
-                isFavourite = false,
+                isFavourite = true,
                 price = ""
             )
+
+
         )
     }
 }
