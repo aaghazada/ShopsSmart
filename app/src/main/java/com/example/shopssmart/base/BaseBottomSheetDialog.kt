@@ -13,7 +13,7 @@ abstract class BaseBottomSheetDialog<VB: ViewBinding>(
 ) : BottomSheetDialogFragment() {
 
     private var _binding: VB? = null
-    val views get() = _binding!!
+    val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,7 +21,7 @@ abstract class BaseBottomSheetDialog<VB: ViewBinding>(
         savedInstanceState: Bundle?
     ): View? {
         _binding = inflate.invoke(inflater, container, false)
-        return views.root
+        return binding.root
     }
 
     override fun onDestroyView() {

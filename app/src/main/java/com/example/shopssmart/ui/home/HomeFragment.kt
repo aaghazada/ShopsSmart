@@ -42,6 +42,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
         initView()
 
+
         val database = Firebase.database
         val myRef = database.getReference("message")
 
@@ -85,7 +86,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         binding.recyclerViewBanner.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
-        val productList = getMockProducts()
         val categoryList = getMockCategory()
         val bannerList = getMockBanner()
 
@@ -93,7 +93,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         binding.recyclerViewCategory.adapter = categoryAdapter
         binding.recyclerViewBanner.adapter = bannerAdapter
 
-        productAdapter.setData(productList)
         categoryAdapter.setData(categoryList)
         bannerAdapter.setData(bannerList)
 

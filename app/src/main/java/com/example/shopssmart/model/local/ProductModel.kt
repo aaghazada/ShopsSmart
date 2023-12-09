@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-@Entity(tableName = "product_table"  )
+@Entity(tableName = "product_table")
 data class ProductModel(
     @PrimaryKey
 
@@ -24,7 +24,10 @@ data class ProductModel(
     val productImage: String,
 
     @ColumnInfo(name = "productPrice")
-    val price : String,
+    val price: String,
+
+    @ColumnInfo(name = "productCategoryId")
+    val productCategoryId: Int? = null,
 
     @ColumnInfo(name = "productDescription")
     val description: String,
@@ -32,6 +35,4 @@ data class ProductModel(
     @ColumnInfo(name = "isFavorite")
     val isFavourite: Boolean = false
 
-): Parcelable {
-    constructor() : this(0, "", "", "", "", "", false)
-}
+) : Parcelable

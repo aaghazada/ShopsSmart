@@ -7,12 +7,13 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
 import com.example.shopssmart.databinding.LayoutCustomInputBinding
+
 class CustomInputView @JvmOverloads constructor(
     ctx: Context,
     attrSet: AttributeSet? = null,
     styleDef: Int = 0
-) : LinearLayout(ctx, attrSet, styleDef)  {
-    private val binding: LayoutCustomInputBinding=
+) : LinearLayout(ctx, attrSet, styleDef) {
+    private val binding: LayoutCustomInputBinding =
         LayoutCustomInputBinding.inflate(LayoutInflater.from(context), this, true)
 
     private var textInput = binding.inputText.text.toString()
@@ -30,10 +31,16 @@ class CustomInputView @JvmOverloads constructor(
             }
         })
     }
-    fun setText(text: String) {
-        binding.inputText.setText(text)
+
+//    fun setTitle(text: String) {
+//        binding.textPlaceHolder.setText(text)
+//    }
+
+    private fun setText(input: String) {
+        return binding.inputText.setText(input)
     }
+
     fun getText(): String {
-        return binding.inputText.text.toString()
+        return
     }
 }

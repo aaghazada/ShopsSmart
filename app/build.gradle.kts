@@ -57,6 +57,7 @@ dependencies {
 
     val nav_version = "2.7.5"
     val room_version = "2.6.0"
+    val lottieVersion = "3.4.0"
 
     // Kotlin
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
@@ -105,6 +106,9 @@ dependencies {
 
     //ViewModel
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+
+    //Lottie
+    implementation ("com.airbnb.android:lottie:$lottieVersion")
 
 
     implementation("androidx.core:core-ktx:1.12.0")

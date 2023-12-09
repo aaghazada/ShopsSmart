@@ -9,10 +9,17 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.view.get
+import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
+import com.example.shopssmart.R
 import com.example.shopssmart.base.BaseFragment
 import com.example.shopssmart.databinding.FragmentAddProductBinding
 import com.example.shopssmart.model.local.ProductModel
+import com.example.shopssmart.ui.dialogs.OperationBottomSheet
+import com.example.shopssmart.util.BundleNames.OPERATION_MESSAGE
+import com.example.shopssmart.util.BundleNames.OPERATION_TYPE
+import com.example.shopssmart.util.OperationType
 import com.example.shopssmart.view_models.AddProductViewModel
 import com.google.firebase.database.core.Context
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,12 +38,12 @@ class AddProductFragment :
             if (isPermitted) {
                 startCameraAction()
             }
-
         }
+
     private val captureResult =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             imageUri?.let {
-//                binding.imgAddProduct.setImageURI(it)
+                binding.imgAddProduct.setImageURI(it)
             }
         }
 
@@ -55,19 +62,39 @@ class AddProductFragment :
         }
         binding.buttonAddToCard.setOnClickListener {
             imageUri?.let { image ->
+                binding.progressBar.isVisible = true
+
                 viewModel.uploadImage(image) { path ->
                     val productItem = ProductModel(
                         id = 0,
                         productId = UUID.randomUUID().toString(),
-                        productTitle = "",
-                        price = "",
+                        productTitle = binding.name.getText(),
+                        price = binding.price.getText(),
                         productImage = path,
-                        description = ""
+                        description = binding.description.getText()
                     )
                     viewModel.addNewProduct(productItem)
+
+                    binding.progressBar.isVisible = false
+
+                    val dialog = OperationBottomSheet() {
+                        resetAllInput()
+                    }
+                    val arguments = Bundle().apply {
+                        this.putString(OPERATION_TYPE, OperationType.SUCCESS.type)
+                        this.putString(OPERATION_MESSAGE, getString(R.string.succesfully_added))
+                    }
+                    dialog.arguments = arguments
+                    dialog.show(requireActivity().supportFragmentManager, "")
                 }
             }
         }
+    }
+
+    private fun resetAllInput() {
+        imageUri = null
+        binding.imgAddProduct.setImageResource(R.drawable.img_1)
+        binding.name.
     }
 
     private fun startCameraAction() {
