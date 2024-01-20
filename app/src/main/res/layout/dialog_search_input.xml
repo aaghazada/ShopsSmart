@@ -10,21 +10,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="25dp"
         android:src="@drawable/ic_arrow_back"
+        app:layout_constraintBottom_toBottomOf="@+id/inputSearch"
+        app:layout_constraintEnd_toStartOf="@+id/inputSearch"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/inputSearch" />
 
     <com.example.shopssmart.components.custom_views.CustomSearchView
         android:id="@+id/inputSearch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgCard"
         app:layout_constraintStart_toEndOf="@+id/imgBackArrow"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_buy"
+        app:layout_constraintBottom_toBottomOf="@+id/inputSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputSearch" />
 
     <View
         android:id="@+id/line"

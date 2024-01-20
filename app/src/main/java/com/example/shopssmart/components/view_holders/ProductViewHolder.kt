@@ -1,5 +1,6 @@
 package com.example.shopssmart.components.view_holders
 
+import com.bumptech.glide.Glide
 import com.example.shopssmart.R
 import com.example.shopssmart.base.BaseViewHolder
 import com.example.shopssmart.components.adapters.ProductAdapter

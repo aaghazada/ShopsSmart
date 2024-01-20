@@ -1,6 +1,7 @@
 package com.example.shopssmart.components.custom_views
 
 import android.content.Context
+import android.media.metrics.LogSessionId
 import android.util.AttributeSet
 import android.util.Log
 import android.view.LayoutInflater
@@ -27,7 +28,7 @@ class CustomSearchView @JvmOverloads constructor(
     fun submit() {
         binding.editSearchInput.setOnEditorActionListener { v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                onSearchInView(binding.editSearchInput.text.toString())
+                Log.i("SearchEdit", binding.editSearchInput.text.toString())
                 return@setOnEditorActionListener true
             }
             false

@@ -28,7 +28,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private fun initViews() {
         binding.imgBackArrow.setOnClickListener {
-            onBackPressed()
+            onBackPressedDispatcher.onBackPressed()
         }
 
         binding.searchView.setOnClickListener{
@@ -67,12 +67,15 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             }
 
             binding.bottomNavBar.apply {
-                isVisible = destination.id !in setOf(
-                    R.id.productDetailsFragment
+                isVisible = destination.id in setOf(
+                    R.id.productDetailsFragment,
+                    R.id.homeFragment,
+                    R.id.accountFragment,
+                    R.id.historyFragment,
+                    R.id.wishListFragment
                 )
             }
 
         }
-
     }
 }

@@ -36,11 +36,11 @@ class CustomInputView @JvmOverloads constructor(
 //        binding.textPlaceHolder.setText(text)
 //    }
 
-    private fun setText(input: String) {
-        return binding.inputText.setText(input)
+    private fun setTitle(title: String) {
+        binding.textPlaceHolder.text = title
     }
 
-    fun getText(): String {
-        return
+    fun setInput(input: String) {
+        binding.inputText.setText(input)
     }
 }

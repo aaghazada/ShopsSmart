@@ -67,11 +67,11 @@ class AddProductFragment :
                 viewModel.uploadImage(image) { path ->
                     val productItem = ProductModel(
                         id = 0,
-                        productId = UUID.randomUUID().toString(),
-                        productTitle = binding.name.getText(),
-                        price = binding.price.getText(),
-                        productImage = path,
-                        description = binding.description.getText()
+                        productId = "",
+                        productTitle = "binding.name.",
+                        price = "",
+                        productImage = "path",
+                        description = "binding.description.getText()"
                     )
                     viewModel.addNewProduct(productItem)
 
@@ -94,7 +94,7 @@ class AddProductFragment :
     private fun resetAllInput() {
         imageUri = null
         binding.imgAddProduct.setImageResource(R.drawable.img_1)
-        binding.name.
+//        binding.name.setImageResource
     }
 
     private fun startCameraAction() {

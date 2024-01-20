@@ -44,9 +44,10 @@
         android:name="com.example.shopssmart.ui.details.ProductDetailsFragment"
         android:label="Details Product"
         tools:layout="@layout/fragment_product_details" >
-<!--        <argument-->
-<!--            android:name="selected_item"-->
-<!--            app:argType="com.example.shopssmart.model.local.ProductModel" />-->
+
+        <argument
+            android:name= "@string/selectedItem"
+            app:argType="com.example.shopssmart.model.local.ProductModel" />
     </fragment>
 
     <fragment

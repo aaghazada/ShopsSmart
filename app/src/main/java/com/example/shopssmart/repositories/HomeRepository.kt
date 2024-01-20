@@ -12,7 +12,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class HomeRepository @Inject constructor(
+class   HomeRepository @Inject constructor(
     private val firebaseDatabase: FirebaseDatabase,
     private val productDao: ProductDao
 ) {
@@ -23,7 +23,7 @@ class HomeRepository @Inject constructor(
         productRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val product = snapshot.getValue(ProductModel::class.java)
-                // dao.insertProduct(product)
+//                 dao.insertProduct(product)
 
                 Log.i("FirebaseDataChange", "onCancelled: ${product.toString()}")
             }

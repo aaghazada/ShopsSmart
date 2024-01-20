@@ -5,7 +5,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
     kotlin("kapt")
-    id ("com.google.dagger.hilt.android")
+    id("com.google.dagger.hilt.android")
     id("com.google.gms.google-services")
 }
 
@@ -19,8 +19,8 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -43,8 +43,11 @@ android {
         viewBinding = true
 
     }
-    kapt{
+    kapt {
         correctErrorTypes = true
+        arguments {
+            arg("room.schemaLocation", "$projectDir/schemas".toString())
+        }
     }
 
 }
@@ -59,7 +62,7 @@ dependencies {
     val room_version = "2.6.0"
     val lottieVersion = "3.4.0"
 
-    // Kotlin
+    // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
@@ -97,19 +100,22 @@ dependencies {
     // optional - Paging 3 Integration
     implementation("androidx.room:room-paging:$room_version")
 
-    //Hilt
-    implementation("com.google.dagger:hilt-android:2.42")
-    kapt("com.google.dagger:hilt-android-compiler:2.42")
+    //Dagger Hilt
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
 
     //SwipeRefresh
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
     //ViewModel
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
 
     //Lottie
-    implementation ("com.airbnb.android:lottie:$lottieVersion")
+    implementation("com.airbnb.android:lottie:$lottieVersion")
 
+    //Glide
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

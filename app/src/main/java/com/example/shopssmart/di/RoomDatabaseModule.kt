@@ -26,6 +26,7 @@ object RoomDatabaseModule {
     }
 
     @Provides
+    @Singleton //added this line
     fun provideProductDao(appDatabase: AppDatabase): ProductDao {
         return appDatabase.getProductDao()
     }

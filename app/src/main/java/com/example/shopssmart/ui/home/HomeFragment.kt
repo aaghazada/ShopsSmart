@@ -41,24 +41,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         super.onViewCreated(view, savedInstanceState)
 
         initView()
-
-
-        val database = Firebase.database
-        val myRef = database.getReference("message")
-
-        myRef.setValue("Hello world!")
-
-        myRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val myValue = snapshot.value
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                val onCancelled = error.message
-            }
-
-        })
-
     }
 
     private fun initView() {

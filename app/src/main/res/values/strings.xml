@@ -15,4 +15,5 @@
     <string name="last_search">Last search</string>
     <string name="clear_all">Clear all</string>
     <string name="succesfully_added">Successfully added!</string>
+    <string name="selectedItem">selectedItem</string>
 </resources>
